@@ -207,8 +207,8 @@ footer hr {
 @media (max-width: 480px) {
   body {
     background: url('BG phone.png') no-repeat center center/cover; /* Different background for mobile */
-    background-size: 110%;
-    background-position: 100% center;
+    background-size: 120%;
+    background-position: 50% center;
   }
 
   .logo {
