@@ -9,14 +9,14 @@ body {
   font-family: 'Goldman', sans-serif;
   color: white;
   background: url('BG.png') no-repeat center center/cover;
-  background-size: cover; /* Ensures background image covers full screen */
-  background-position: 47.5% center;
+  background-position: 48% center;
   height: 100vh;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-height: 85vh;
   user-select: none;
 }
 
@@ -52,20 +52,15 @@ footer {
   width: 100%;
   text-align: center;
   z-index: 1;
-  transform: scale(1); /* Prevents zooming */
-  user-select: none; /* Prevents text selection */
-  pointer-events: none; /* Prevents interaction with footer */
 }
 
 .social-media {
   display: inline-flex;
   align-items: center;
-  pointer-events: auto; /* Allows interaction within social media icons */
 }
 
 .social-media a {
   margin: 0 10px;
-  pointer-events: auto;
 }
 
 footer hr {
@@ -150,7 +145,7 @@ footer hr {
 .drop-up-menu {
   position: absolute;
   bottom: 35px;
-  right: 140px;
+  right: 165px;
   background-color: rgba(255, 255, 255, 0.65);
   padding: 10px;
   border-radius: 10px;
@@ -176,7 +171,7 @@ footer hr {
 }
 
 /* Mobile and Tablet Responsive Styles */
-@media (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 768px) {
   h1 {
     font-size: 2.5rem;
   }
@@ -211,19 +206,20 @@ footer hr {
 
 @media (max-width: 480px) {
   body {
-    background: url('BG phone.png') no-repeat center center/cover;
+    background: url('BG phone.png') no-repeat center center/cover; /* Different background for mobile */
     background-size: cover;
+    background-position: 50% center;
   }
 
   .logo {
-    width: 150px;
-    margin-top: 60px;
+    width: 40vw;
+    margin-top: 60px; /* Move the logo a bit higher on phone */
     margin-bottom: 120px;
   }
 
   h1 {
-    font-size: 2.7rem;
-    margin-bottom: 20px;
+    font-size: 10vw ;
+    margin-bottom: 20px; /* Add space between logo and heading */
     background: linear-gradient(to right, #000000, #b3b3b3, #ffffff, #ffffff, #ffffff, #b3b3b3, #000000);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -239,7 +235,18 @@ footer hr {
     width: 20px; /* Make icons smaller on mobile */
   }
 
-  .drop-up-menu ul li {
-    font-size: 0.8rem;
+  .drop-up-menu {
+    right: 50%; /* Adjusted to fit smaller screens */
+    bottom: 15vw;
+    position: absolute;
+    left: 50%; /* Start from the center horizontally */
+    transform: translateX(-50%); /* Center align the menu */
   }
+
+  .drop-up-menu ul li {
+    color: rgb(0, 0, 0);
+    font-size: 3vw;
+    padding: 0.5vw 0;
+  }
+    
 }
