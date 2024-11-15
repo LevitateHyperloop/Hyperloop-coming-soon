@@ -260,7 +260,13 @@
       font-size: 3vw;
       padding: 0.5vw 0;
     }
-      
+
+    footer hr {
+      border: 0.1vw solid rgba(255, 255, 255, 0.767);
+      width: 70%;
+      margin: 2vw auto;
+    }
+    
   }
 
   @media (max-width: 1024px) and (orientation: landscape) {
