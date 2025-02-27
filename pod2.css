@@ -1,0 +1,198 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  background-color: black;
+  overflow-x: hidden;
+  font-weight: bold;
+  
+}
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+*
+{
+  
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins',sans-serif;
+
+}
+body
+{
+  background: #040d15;
+  min-height: 1000px;
+}
+
+
+section
+{
+  padding-top: 80px; /* Adjust this value to match the height of the navbar */
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section:before
+{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, #0412, transparent);  
+}
+section:after
+{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:#03080c;
+  z-index: 10 ;
+  mix-blend-mode: color;  
+}
+
+section img
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+#text
+{
+  position: relative;
+  padding-top: 10vh;
+  color: #fff;
+  font-size: 10em;
+  z-index: 3;
+}
+#text1
+{
+  padding-top: 30vh;
+  padding-left: 30vh;
+  padding-right: 30vh;
+  text-align: center;
+  position: relative;
+  color: #fff;
+  font-size: 3em;
+  z-index: 5;
+  height: 60vh;
+}
+
+#bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("assets/bg.jpeg");
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+#moon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("assets/justpod.png");
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+#mountain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("assets/podmid.png");
+  background-size: cover;
+  background-position: center;
+  z-index: 2;
+}
+
+#road {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("assets/floorr.png");
+  background-size: cover;
+  background-position: center;
+  z-index: 4;
+}
+
+
+@media screen and (max-width: 1024px) {
+  #text {
+    font-size: 8em; /* Reduce heading size for tablets */
+    padding-bottom: 2em;
+  }
+
+  #text1 {
+    font-size: 2em;
+    padding-top: 20vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+
+  #bg {
+    background-image: url("assets/bg11.png"); /* Change image */
+  }
+  #moon {
+    background-image: url("assets/justpod22.png"); /* Change image */
+  }
+  #mountain {
+    background-image: url("assets/podmid11.png"); /* Change image */
+  }
+  #road {
+    background-image: url("assets/floorr11.png"); /* Change image */
+  }
+}
+
+@media screen and (max-width: 768px) {  
+
+  body{
+    overflow-x: hidden !important;
+  }
+  #text {
+    font-size: 4em;
+    padding-bottom: 2em;
+  }
+
+  #text1 {
+    font-size: 1.5em;
+    padding-top: 10vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  #bg {
+    background-image: url("assets/bg11.png"); /* Change image */
+  }
+  #moon {
+    background-image: url("assets/justpod11.png"); /* Change image */
+  }
+  #mountain {
+    background-image: url("assets/podmid11.png"); /* Change image */
+  }
+  #road {
+    background-image: url("assets/floorr11.png"); /* Change image */
+  }
+}
