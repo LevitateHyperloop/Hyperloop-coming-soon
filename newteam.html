@@ -423,6 +423,9 @@
         const navbar = document.querySelector('.navbar');
         navbar.classList.toggle('active');  // Toggles the 'active' class to show/hide the menu
     }
+     if (window.location.pathname.endsWith(".html")) {
+    window.history.replaceState(null, "", window.location.pathname.replace(".html", ""));
+  }
 </script>
 
 </body>
