@@ -5,7 +5,7 @@
     { "src": "/Team", "dest": "/newteam.html" },
     { "src": "/Technology", "dest": "/pod2.html" },
     { "src": "/Home", "dest": "/index.html" },
-    { "src": "/Projects", "dest": "/projects.html" }
+    { "src": "/Projects", "dest": "/projects.html" },
     { "src": "/Partners", "dest": "/sponsors.html" }
   ]
 }
