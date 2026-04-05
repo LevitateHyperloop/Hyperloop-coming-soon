@@ -137,4 +137,3 @@ function toggleMenu() {
   navbar.classList.toggle('active');  // Toggles the 'active' class to show/hide the menu
 }
 
-

@@ -349,6 +349,33 @@ body {
   margin: 0.5rem 0;
 }
 
+/* Custom rows for Leadership section */
+.leadership-row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap; /* Allows wrapping on mobile */
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+/* Fix for your card headings to ensure they are readable */
+.card h3 {
+    font-size: 1.2rem; /* Using rem instead of vw for better stability */
+    color: #67e0f3;
+    margin-top: 10px;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #eddfdf;
+}
+
+/* Ensure the cards in board don't shrink too much */
+.board .card {
+    flex: 0 1 250px; /* Fixed basis so they look consistent */
+    min-width: 220px;
+}
 
 
 /* Video Panel Styling */
@@ -565,4 +592,130 @@ body {
     max-width: calc(50% - 10px);
     margin: 5px;
   }
+}
+
+/* Container for the rows */
+.faculty-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* Gap between the 1st and 2nd row */
+.top-row {
+    margin-bottom: 50px; /* Adjust this value for more/less gap */
+}
+
+/* Ensure the main card stays large */
+.top-row .faculty-card {
+    max-width: 800px;
+    width: 100%;
+}
+
+/* Adjustments for the row of 3 cards */
+.bottom-row .faculty-card.small-card {
+    flex: 1 1 300px; /* Allows them to grow/shrink but try to stay 300px wide */
+    max-width: 350px;
+    padding: 1.5rem;
+}
+
+/* Adjust the info layout for smaller cards so they don't look cramped */
+.small-card .info {
+    flex-direction: column; /* Stacks image on top of text for the 3-row layout */
+    text-align: center;
+    gap: 10px;
+}
+
+.small-card .details blockquote {
+    display: none; /* Usually better to hide quotes on small side-by-side cards */
+}
+
+/* Responsive fix: Stack them on mobile */
+@media (max-width: 768px) {
+    .bottom-row .faculty-card.small-card {
+        flex: 0 1 100%;
+        max-width: 100%;
+    }
+}
+
+/* Ensure blockquotes are visible in the bottom row cards */
+.small-card .details blockquote {
+    display: block; /* Overrides previous 'none' if you had it */
+    font-size: 0.85rem;
+    margin: 10px 0;
+    line-height: 1.4;
+    border-left: 3px solid #0077b5;
+    padding-left: 10px;
+}
+
+/* Adjust the bottom row to handle 4 cards effectively */
+.bottom-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.bottom-row .faculty-card {
+    max-width: 100%; /* Allows the grid to define the width */
+    height: 100%;    /* Ensures all cards in a row are the same height */
+}
+
+/* On very small screens, make them stack nicely */
+@media (max-width: 600px) {
+    .bottom-row {
+        grid-template-columns: 1fr;
+    }
+}
+.year-selector {
+    text-align: center;
+    /* This pushes the dropdown down so it doesn't hide behind the navbar */
+    margin-top: 120px; 
+    margin-bottom: 30px;
+    color: #dadee2;
+    font-family: 'Goldman', sans-serif;
+    position: relative;
+    z-index: 10; /* Ensures it stays above background particles */
+}
+
+.year-selector label {
+    margin-right: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.year-selector select {
+    background: #070707;
+    color: #67e0f3;
+    border: 2px solid #67e0f3;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Goldman', sans-serif;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 5px rgba(103, 224, 243, 0.2);
+}
+
+.year-selector select:hover {
+    box-shadow: 0 0 15px #67e0f3;
+    background: #111;
+}
+
+.year-selector select option {
+    background: #070707;
+    color: #67e0f3;
+}
+
+#secret-naiju {
+    cursor: pointer;
+    transition: transform 0.1s ease, filter 0.5s ease;
+    user-select: none; /* Prevents highlighting the image on fast clicks */
+}
+
+#secret-naiju:active {
+    transform: scale(0.95) !important;
 }
