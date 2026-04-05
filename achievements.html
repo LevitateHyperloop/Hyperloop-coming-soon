@@ -103,39 +103,7 @@
 
 
 
-<script>
-  ScrollReveal({
-    reset: true,
-    distance: '40px',
-    duration: 2500,
-    delay: 400
-  });
 
-  ScrollReveal().reveal('.Main-title', { delay: 100,origin:'left' });
-  ScrollReveal().reveal('.sec-01 .image,.sec-02 .image,.sec-03 .image,.sec-04 .image,.sec-05 .image,.sec-06 .image',  { delay: 100, origin: 'bottom' });
-  ScrollReveal().reveal('.sec-01 .text-box,.sec-02 .text-box,.sec-03 .text-box,.sec-04 .text-box,.sec-05 .text-box,.sec-06 .text-box', { delay: 100, origin: 'right' });
-  function toggleMenu() {
-  const navbar = document.querySelector('.navbar');
-  navbar.classList.toggle('active');  // Toggles the 'active' class to show/hide the menu
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  const navbar = document.querySelector('.navbar');
-  let lastScrollY = window.scrollY;
-
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > lastScrollY) {
-      // Scrolling down
-      navbar.classList.add('hidden');
-    } else {
-      // Scrolling up
-      navbar.classList.remove('hidden');
-    }
-    lastScrollY = window.scrollY;
-  });
-});
-
-</script>
 
 <!-- Footer -->
 <footer>
