@@ -598,3 +598,30 @@ footer hr {
     padding: 0.2vw 0; /* Adjust padding for spacing */
   }
 }
+
+/* The Full Loop: Start -> Top -> Start */
+@keyframes levitateLoop {
+  0% { 
+    transform: translateY(0); 
+    filter: drop-shadow(0 5px 5px rgba(103, 224, 243, 0.2));
+  }
+  50% { 
+    transform: translateY(-1000px); /* Adjust this for higher/lower lift */
+    filter: drop-shadow(0 25px 25px rgba(103, 224, 243, 0.5));
+  }
+  100% { 
+    transform: translateY(0); 
+    filter: drop-shadow(0 5px 5px rgba(103, 224, 243, 0.2));
+  }
+}
+
+.levitate-target {
+  /* Using cubic-bezier for a more 'weighted' physical feel */
+  animation: levitateLoop 4s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite !important;
+  transition: all 0.5s ease;
+}
+
+/* Staggering the start times so they don't move as a single block */
+.hero-text.levitate-target { animation-delay: 0s; }
+.hero-text-2.levitate-target { animation-delay: 0.3s; }
+.social-media.levitate-target { animation-delay: 0.6s; }

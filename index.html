@@ -98,3 +98,42 @@
   
 </body>
 </html>
+
+<script>
+  (function() {
+    const sequence = ['ArrowUp', 'ArrowRight', 'ArrowDown', 'ArrowLeft'];
+    let index = 0;
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === sequence[index]) {
+        index++;
+        if (index === sequence.length) {
+          toggleLevitation();
+          index = 0; 
+        }
+      } else {
+        index = 0;
+      }
+    });
+
+    function toggleLevitation() {
+      // Select the specific elements you want to float
+      const elementsToFloat = [
+        document.querySelector('.hero-text'),
+        document.querySelector('.hero-text-2'),
+        document.querySelector('.social-media')
+      ];
+
+      elementsToFloat.forEach(el => {
+        if (el) el.classList.toggle('levitate-target');
+      });
+
+      // Visual feedback on the logo
+      const logo = document.querySelector('.logo img');
+      if (logo) {
+        logo.style.filter = "brightness(1.5) drop-shadow(0 0 10px #67e0f3)";
+        setTimeout(() => { logo.style.filter = ""; }, 600);
+      }
+    }
+  })();
+</script>
